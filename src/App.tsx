@@ -300,7 +300,7 @@ export default function App() {
               </motion.div>
             ))}
           </div>
-          <div className="bg-emerald-600 text-white p-3 md:p-8 rounded-xl md:rounded-2xl flex items-center justify-between shadow-md shrink-0">
+          <div className="bg-emerald-600 text-white p-3 md:p-8 rounded-xl md:rounded-2xl flex items-center justify-center shadow-md shrink-0">
             <div className="flex items-center gap-3 md:gap-6">
               <Heart className="w-6 h-6 md:w-12 md:h-12 text-emerald-200" />
               <div>
@@ -308,10 +308,15 @@ export default function App() {
                 <p className="text-emerald-100 text-[10px] md:text-lg">Cuidado coletivo.</p>
               </div>
             </div>
-            <button className="bg-white text-emerald-700 px-4 py-1.5 md:px-8 md:py-3 rounded-full font-black text-[10px] md:text-lg">
-              Ver +
-            </button>
           </div>
+          <motion.p 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.6 }}
+            className="text-[9px] md:text-base text-emerald-800 font-bold text-center italic"
+          >
+            "Em Campanhas de vacinação, são liberadas para todos a vacina."
+          </motion.p>
         </div>
       )
     },
@@ -365,7 +370,7 @@ export default function App() {
           >
             <div className="relative h-24 md:h-40 w-full overflow-hidden rounded-xl md:rounded-2xl border border-indigo-200/50">
               <img 
-                src="https://i.postimg.cc/HstnPXTW/333.jpg" 
+                src="https://i.postimg.cc/SRdBhyTR/111.jpg" 
                 alt="Processo de Imunização" 
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
@@ -494,6 +499,43 @@ export default function App() {
               <button className="bg-white text-pink-600 px-5 py-2 md:px-10 md:py-4 rounded-full font-black text-xs md:text-xl shadow-md transition-transform">
                 Localizar Posto
               </button>
+            </div>
+          </div>
+        </div>
+      )
+    },
+    {
+      id: "thanks",
+      title: "Agradecimentos",
+      subtitle: "Cuidado e prevenção em primeiro lugar.",
+      icon: <Users className="w-16 h-16 text-amber-600" />,
+      bgColor: "bg-amber-50",
+      accentColor: "text-amber-600",
+      content: (
+        <div className="text-center space-y-4 md:space-y-8 overflow-hidden">
+          <motion.div
+            initial={{ scale: 0.9, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ delay: 0.2 }}
+            className="flex justify-center"
+          >
+            <div className="bg-white px-6 py-4 md:px-12 md:py-8 rounded-3xl md:rounded-[3rem] shadow-xl border-2 md:border-4 border-amber-200 inline-block mb-2">
+              <h2 className="text-2xl md:text-6xl font-black text-amber-600 tracking-tight">OBRIGADO A TODOS!</h2>
+            </div>
+          </motion.div>
+          
+          <div className="max-w-xl mx-auto px-2">
+            <div className="bg-red-600 text-white p-4 md:p-8 rounded-2xl md:rounded-[2.5rem] shadow-lg space-y-2 md:space-y-4 relative overflow-hidden">
+               <div className="relative z-10 flex flex-col items-center gap-2 md:gap-4">
+                  <Activity size={32} className="text-red-200 md:w-12 md:h-12" />
+                  <h3 className="text-base md:text-3xl font-black uppercase tracking-tight leading-none">Advertência</h3>
+                  <p className="text-xs md:text-xl font-medium leading-tight md:leading-relaxed">
+                    A vacinação anual é essencial. Não espere o inverno chegar: proteja-se agora e evite complicações graves da Influenza.
+                  </p>
+                  <div className="bg-white/20 px-4 py-1 rounded-full text-[10px] md:text-sm font-black italic">
+                    "Vacina no braço, saúde no peito!"
+                  </div>
+               </div>
             </div>
           </div>
         </div>
