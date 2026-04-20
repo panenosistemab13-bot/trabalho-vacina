@@ -111,7 +111,7 @@ const AuthorHeader = ({ isDark }: { isDark: boolean }) => {
           <span className={`text-xs font-bold ${
             isDark ? "text-indigo-300" : "text-blue-700"
           }`}>
-            - GRUPO 1 (MICROBIOLOGIA)
+            - GRUPO 01 (MICROBIOLOGIA)
           </span>
         </div>
       </div>
@@ -132,25 +132,25 @@ export default function App() {
       bgColor: "bg-indigo-50",
       accentColor: "text-indigo-600",
       content: (
-        <div className="flex flex-col items-center space-y-6">
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6 w-full max-w-4xl">
+        <div className="flex flex-col items-center space-y-3 md:space-y-6">
+          <div className="grid grid-cols-3 md:grid-cols-3 gap-2 md:gap-6 w-full max-w-4xl">
             {[
-              { name: "Francielle", img: "https://i.postimg.cc/1znGgNcv/FRANCIELLE.jpg" },
-              { name: "Thainara", img: "https://i.postimg.cc/Gp8FBsJM/Thainara.jpg" },
+              { name: "Francielle", img: "https://i.postimg.cc/YqMT1tPL/FRANCIELLE-2.jpg" },
+              { name: "Thainara", img: "https://i.postimg.cc/xTnBK9Zz/Thainara-2.jpg" },
               { name: "Marina" },
-              { name: "Bárbara", img: "https://i.postimg.cc/4376Khbz/BARBARA.jpg" },
-              { name: "Aline" },
-              { name: "Carol" }
+              { name: "Bárbara", img: "https://i.postimg.cc/HnZ0c0KZ/BARBARA2.jpg" },
+              { name: "Aline", img: "https://i.postimg.cc/WbTxMsyd/ALINE.jpg" },
+              { name: "Carol", img: "https://i.postimg.cc/ht5SyJFH/CAROL-2.jpg" }
             ].map((member, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.1 * i + 0.3 }}
-                whileHover={{ scale: 1.05, y: -5 }}
-                className="bg-white p-4 rounded-[2rem] shadow-xl border border-indigo-100 flex flex-col items-center space-y-3 group transition-all hover:border-indigo-300"
+                transition={{ delay: 0.05 * i + 0.2 }}
+                whileHover={{ scale: 1.05 }}
+                className="bg-white p-2 md:p-4 rounded-2xl md:rounded-[2rem] shadow-md md:shadow-xl border border-indigo-100 flex flex-col items-center space-y-1 md:space-y-3 group transition-all"
               >
-                <div className="w-28 h-28 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-full flex items-center justify-center text-white text-3xl font-black shadow-lg ring-4 ring-white transition-transform group-hover:rotate-12 overflow-hidden">
+                <div className="w-14 h-14 md:w-28 md:h-28 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-full flex items-center justify-center text-white text-xl md:text-3xl font-black shadow-md ring-2 md:ring-4 ring-white transition-transform group-hover:rotate-12 overflow-hidden shrink-0">
                   {member.img ? (
                     <img 
                       src={member.img} 
@@ -162,7 +162,7 @@ export default function App() {
                     member.name[0]
                   )}
                 </div>
-                <h3 className="text-xl font-black text-gray-900 tracking-tight">{member.name}</h3>
+                <h3 className="text-[10px] md:text-xl font-black text-gray-900 tracking-tight text-center leading-none">{member.name}</h3>
               </motion.div>
             ))}
           </div>
@@ -170,11 +170,11 @@ export default function App() {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 1.2 }}
-            className="bg-indigo-600 text-white px-8 py-3 rounded-full font-black text-lg shadow-xl flex items-center gap-4"
+            transition={{ delay: 0.8 }}
+            className="bg-indigo-600 text-white px-4 py-1.5 md:px-8 md:py-3 rounded-full font-black text-[10px] md:text-lg shadow-lg flex items-center gap-2 md:gap-4 shrink-0 whitespace-nowrap"
           >
-            <Activity size={20} />
-            GRUPO 1 - MICROBIOLOGIA
+            <Activity size={12} className="md:w-5 md:h-5 shrink-0" />
+            GRUPO 01 - MICROBIOLOGIA
           </motion.div>
         </div>
       )
@@ -187,33 +187,30 @@ export default function App() {
       bgColor: "bg-blue-50",
       accentColor: "text-blue-600",
       content: (
-        <div className="flex flex-col items-center text-center space-y-6">
+        <div className="flex flex-col items-center text-center space-y-4 md:space-y-6">
           <motion.div
             initial={{ scale: 0.9, opacity: 0, rotate: -2 }}
             animate={{ scale: 1, opacity: 1, rotate: 0 }}
             transition={{ delay: 0.2, type: "spring", stiffness: 100 }}
-            className="relative group cursor-zoom-in"
+            className="relative group shrink-0"
           >
-            <div className="absolute -inset-6 bg-blue-400 rounded-full blur-3xl opacity-20 group-hover:opacity-30 transition-opacity animate-pulse" />
-            <div className="relative p-2 bg-white/40 backdrop-blur-md rounded-[2.5rem] border border-white/60 shadow-xl overflow-hidden ring-1 ring-black/5 transition-transform group-hover:scale-105">
+            <div className="absolute -inset-4 md:-inset-6 bg-blue-400 rounded-full blur-2xl md:blur-3xl opacity-20 group-hover:opacity-30 transition-opacity animate-pulse" />
+            <div className="relative p-1 md:p-2 bg-white/40 backdrop-blur-md rounded-[2rem] md:rounded-[2.5rem] border border-white/60 shadow-lg md:shadow-xl overflow-hidden">
               <img 
                 src="https://i.postimg.cc/QCzqHk9S/foto1.jpg" 
                 alt="Vacina" 
-                className="w-56 h-56 object-cover rounded-[2rem]"
+                className="w-40 h-40 md:w-56 md:h-56 object-cover rounded-[1.5rem] md:rounded-[2rem]"
                 referrerPolicy="no-referrer"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
             </div>
           </motion.div>
-          <div className="max-w-2xl">
-            <p className="text-xl md:text-3xl text-gray-700 leading-relaxed font-medium">
+          <div className="max-w-2xl px-2">
+            <p className="text-base md:text-3xl text-gray-700 font-medium leading-tight md:leading-relaxed">
               A vacinação é a forma mais eficaz de prevenir a gripe e suas complicações graves. 
-              Entenda como ela funciona e por que é essencial para todos.
             </p>
           </div>
-          <div className="flex gap-4">
-            <span className="px-5 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-black uppercase tracking-wider">Campanha 2024</span>
-            <span className="px-5 py-2 bg-green-100 text-green-700 rounded-full text-sm font-black uppercase tracking-wider">Saúde Pública</span>
+          <div className="flex gap-2">
+            <span className="px-3 py-1 md:px-5 md:py-2 bg-green-100 text-green-700 rounded-full text-[10px] md:text-sm font-black uppercase tracking-wider">Saúde Pública</span>
           </div>
         </div>
       )
@@ -225,57 +222,40 @@ export default function App() {
       bgColor: "bg-red-50",
       accentColor: "text-red-600",
       content: (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          <div className="space-y-6">
-            <div className="bg-white p-6 rounded-2xl shadow-sm border border-red-100">
-              <h3 className="text-2xl font-black text-red-700 mb-4 flex items-center gap-3">
-                <Activity className="w-8 h-8" /> Doença Viral
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 items-center overflow-hidden">
+          <div className="space-y-2 md:space-y-6">
+            <div className="bg-white p-3 md:p-6 rounded-xl md:rounded-2xl shadow-sm border border-red-100">
+              <h3 className="text-base md:text-2xl font-black text-red-700 mb-1 md:mb-4 flex items-center gap-2 md:gap-3">
+                <Activity className="w-5 h-5 md:w-8 md:h-8" /> Doença Viral
               </h3>
-              <p className="text-gray-800 text-xl leading-relaxed">
-                A gripe é uma infecção viral aguda do sistema respiratório, altamente contagiosa. 
-                Diferente de um resfriado comum, ela pode ser muito mais severa.
+              <p className="text-gray-800 text-sm md:text-xl leading-snug md:leading-relaxed">
+                Infecção viral aguda respiratória, altamente contagiosa e severa.
               </p>
             </div>
-            <div className="space-y-4">
-              <h4 className="font-black text-gray-900 text-lg italic underline decoration-red-200">Sintomas Comuns:</h4>
-              <ul className="grid grid-cols-2 gap-3">
-                {["Febre Alta", "Tosse Seca", "Dor no Corpo", "Fadiga Extrema", "Dor de Garganta", "Calafrios"].map((s, i) => (
-                  <li key={i} className="flex items-center gap-3 text-gray-700 text-lg font-medium">
-                    <div className="w-2.5 h-2.5 bg-red-500 rounded-full" /> {s}
+            <div className="space-y-1 md:space-y-4">
+              <h4 className="font-black text-gray-900 text-xs md:text-lg italic underline decoration-red-200">Sintomas:</h4>
+              <ul className="grid grid-cols-3 md:grid-cols-2 gap-1 md:gap-3">
+                {["Febre", "Tosse", "Cansaço", "Dores", "Garganta", "Fio"].map((s, i) => (
+                  <li key={i} className="flex items-center gap-1.5 md:gap-3 text-gray-700 text-[10px] md:text-lg font-medium">
+                    <div className="w-1.5 h-1.5 md:w-2.5 md:h-2.5 bg-red-500 rounded-full" /> {s}
                   </li>
                 ))}
               </ul>
             </div>
           </div>
           <motion.div 
-            initial={{ x: 50, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ delay: 0.4 }}
-            className="relative"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="relative flex justify-center shrink-0"
           >
-            <div className="absolute -inset-4 bg-red-200 rounded-[4rem] blur-2xl opacity-20" />
-            <div className="relative group rounded-[2.5rem] overflow-hidden border-4 border-white shadow-xl transform rotate-1 hover:rotate-0 transition-transform duration-500 max-w-sm mx-auto">
+            <div className="relative group rounded-2xl md:rounded-[2.5rem] overflow-hidden border-2 md:border-4 border-white shadow-lg max-w-[140px] md:max-w-sm">
               <img 
                 src="https://i.postimg.cc/C50RJZyx/foto2.jpg" 
                 alt="Sintomas" 
-                className="w-full h-auto object-cover max-h-[350px] scale-105 group-hover:scale-100 transition-transform duration-700"
+                className="w-full h-auto object-cover max-h-[160px] md:max-h-[350px]"
                 referrerPolicy="no-referrer"
               />
             </div>
-            <motion.div 
-              initial={{ scale: 0, rotate: 10 }}
-              animate={{ scale: 1, rotate: -5 }}
-              transition={{ delay: 0.8, type: "spring" }}
-              className="absolute -bottom-6 -left-2 bg-white p-4 rounded-2xl shadow-xl max-w-[200px] border border-red-100 z-20"
-            >
-              <div className="flex items-center gap-2 mb-1">
-                <span className="w-1.5 h-1.5 bg-red-500 rounded-full animate-ping" />
-                <p className="text-[10px] font-black text-red-600 uppercase tracking-widest">Alerta</p>
-              </div>
-              <p className="text-gray-700 text-xs leading-tight">
-                Complicações como a <strong className="text-red-900">Pneumonia</strong> são riscos reais.
-              </p>
-            </motion.div>
           </motion.div>
         </div>
       )
@@ -287,50 +267,49 @@ export default function App() {
       bgColor: "bg-emerald-50",
       accentColor: "text-emerald-600",
       content: (
-        <div className="space-y-8">
-          <div className="text-center max-w-2xl mx-auto">
-            <p className="text-2xl font-medium text-gray-800">
-              Grupos prioritários devido ao maior risco de complicações:
+        <div className="space-y-3 md:space-y-8">
+          <div className="text-center max-w-2xl mx-auto px-2">
+            <p className="text-base md:text-2xl font-medium text-gray-800 leading-tight">
+              Grupos prioritários de risco:
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+          <div className="grid grid-cols-3 md:grid-cols-5 gap-2 md:gap-4 overflow-hidden">
             {[
-              { label: "Crianças", desc: "Até 6 anos", img: "https://i.postimg.cc/rFjLDDQr/criancas.jpg" },
-              { label: "Idosos", desc: "60+ anos", img: "https://i.postimg.cc/3JYTrXCj/idosos.jpg" },
-              { label: "Gestantes", desc: "E puérperas", img: "https://i.postimg.cc/X7L0rrQF/gestantes.jpg" },
-              { label: "Saúde", desc: "Profissionais", img: "https://i.postimg.cc/GhdC3FJQ/saude.jpg" },
-              { label: "Crônicos", desc: "Comorbidades", img: "https://i.postimg.cc/9FChXdt1/cronicos.jpg" },
+              { label: "Crianças", desc: "Até 6a", img: "https://i.postimg.cc/rFjLDDQr/criancas.jpg" },
+              { label: "Idosos", desc: "60+", img: "https://i.postimg.cc/3JYTrXCj/idosos.jpg" },
+              { label: "Gestantes", desc: "Puérp.", img: "https://i.postimg.cc/X7L0rrQF/gestantes.jpg" },
+              { label: "Saúde", desc: "Profis.", img: "https://i.postimg.cc/GhdC3FJQ/saude.jpg" },
+              { label: "Crônicos", desc: "Comorb.", img: "https://i.postimg.cc/9FChXdt1/cronicos.jpg" },
             ].map((group, i) => (
               <motion.div 
                 key={i}
-                whileHover={{ y: -5, scale: 1.02 }}
-                className="bg-white p-4 pb-5 rounded-2xl shadow-md border border-emerald-100 text-center space-y-3 hover:shadow-lg transition-all"
+                className="bg-white p-2 md:p-4 rounded-xl md:rounded-2xl shadow-sm border border-emerald-100 text-center space-y-1 transition-all"
               >
-                <div className="w-full aspect-square bg-emerald-50 rounded-xl overflow-hidden shadow-inner border border-emerald-50">
+                <div className="w-full aspect-square bg-emerald-50 rounded-lg md:rounded-xl overflow-hidden shadow-inner border border-emerald-50 shrink-0">
                   <img 
                     src={group.img} 
                     alt={group.label} 
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover"
                     referrerPolicy="no-referrer"
                   />
                 </div>
                 <div>
-                  <h4 className="font-black text-gray-900 text-lg uppercase tracking-tight">{group.label}</h4>
-                  <p className="text-sm font-bold text-emerald-600 mt-1">{group.desc}</p>
+                  <h4 className="font-black text-gray-900 text-[10px] md:text-lg uppercase tracking-tight leading-none truncate">{group.label}</h4>
+                  <p className="text-[8px] md:text-sm font-bold text-emerald-600 mt-0.5 leading-none">{group.desc}</p>
                 </div>
               </motion.div>
             ))}
           </div>
-          <div className="bg-emerald-600 text-white p-8 rounded-2xl flex items-center justify-between shadow-lg">
-            <div className="flex items-center gap-6">
-              <Heart className="w-12 h-12 text-emerald-200" />
+          <div className="bg-emerald-600 text-white p-3 md:p-8 rounded-xl md:rounded-2xl flex items-center justify-between shadow-md shrink-0">
+            <div className="flex items-center gap-3 md:gap-6">
+              <Heart className="w-6 h-6 md:w-12 md:h-12 text-emerald-200" />
               <div>
-                <h3 className="text-3xl font-black">Indicado para TODOS!</h3>
-                <p className="text-emerald-100 text-lg">Vacinar é cuidado coletivo.</p>
+                <h3 className="text-sm md:text-3xl font-black">Público Alvo</h3>
+                <p className="text-emerald-100 text-[10px] md:text-lg">Cuidado coletivo.</p>
               </div>
             </div>
-            <button className="bg-white text-emerald-700 px-8 py-3 rounded-full font-black text-lg hover:bg-emerald-50 transition-colors">
-              Detalhes
+            <button className="bg-white text-emerald-700 px-4 py-1.5 md:px-8 md:py-3 rounded-full font-black text-[10px] md:text-lg">
+              Ver +
             </button>
           </div>
         </div>
@@ -343,54 +322,54 @@ export default function App() {
       bgColor: "bg-indigo-50",
       accentColor: "text-indigo-600",
       content: (
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-4 overflow-hidden">
           {[
             {
               step: "01",
               title: "Estímulo",
-              desc: "A vacina apresenta ao corpo fragmentos inofensivos do vírus.",
+              desc: "A vacina apresenta o vírus inativado.",
               icon: <Info className="text-indigo-500" />
             },
             {
               step: "02",
               title: "Anticorpos",
-              desc: "O sistema reconhece e produz defesas específicas.",
+              desc: "O sistema produz defesas.",
               icon: <Activity className="text-indigo-500" />
             },
             {
               step: "03",
               title: "Proteção",
-              desc: "Seu corpo já sabe como combatê-lo rapidamente.",
+              desc: "Combate rápido do vírus real.",
               icon: <ShieldCheck className="text-indigo-500" />
             }
           ].map((item, i) => (
-            <div key={i} className="bg-white p-6 rounded-2xl shadow-sm border border-indigo-100 relative overflow-hidden group">
-              <div className="absolute top-0 right-0 p-3 text-5xl font-black text-indigo-50 opacity-40 group-hover:opacity-100 transition-opacity">
+            <div key={i} className="bg-white p-3 md:p-6 rounded-xl md:rounded-2xl shadow-sm border border-indigo-100 relative group">
+              <div className="absolute top-0 right-0 p-1 md:p-3 text-2xl md:text-5xl font-black text-indigo-50 opacity-40 group-hover:opacity-100 transition-opacity leading-none">
                 {item.step}
               </div>
-              <div className="relative z-10 space-y-3">
-                <div className="w-12 h-12 bg-indigo-50 rounded-xl flex items-center justify-center">
-                  {React.cloneElement(item.icon as React.ReactElement, { size: 24 })}
+              <div className="relative z-10 flex md:flex-col items-center md:items-start gap-4 md:space-y-3">
+                <div className="w-8 h-8 md:w-12 md:h-12 bg-indigo-50 rounded-lg flex items-center justify-center shrink-0">
+                  {React.cloneElement(item.icon as React.ReactElement, { className: "w-4 h-4 md:w-6 md:h-6" })}
                 </div>
-                <h3 className="text-2xl font-black text-gray-900">{item.title}</h3>
-                <p className="text-gray-700 text-lg leading-relaxed font-medium">{item.desc}</p>
+                <div>
+                  <h3 className="text-sm md:text-2xl font-black text-gray-900 leading-none mb-1">{item.title}</h3>
+                  <p className="text-gray-700 text-[10px] md:text-lg leading-tight font-medium">{item.desc}</p>
+                </div>
               </div>
             </div>
           ))}
           <motion.div 
-            initial={{ y: 20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.6 }}
-            className="md:col-span-3 relative group"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="md:col-span-3 relative flex justify-center shrink-0"
           >
-            <div className="relative h-40 overflow-hidden rounded-2xl border border-indigo-200/50">
+            <div className="relative h-24 md:h-40 w-full overflow-hidden rounded-xl md:rounded-2xl border border-indigo-200/50">
               <img 
-                src="https://i.postimg.cc/7YxC2Tnq/foto3.jpg" 
-                alt="Sistema Imunológico" 
+                src="https://i.postimg.cc/HstnPXTW/333.jpg" 
+                alt="Processo de Imunização" 
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-indigo-900/40 to-transparent" />
             </div>
           </motion.div>
         </div>
@@ -403,50 +382,44 @@ export default function App() {
       bgColor: "bg-orange-50",
       accentColor: "text-orange-600",
       content: (
-        <div className="flex flex-col md:flex-row gap-10 items-center">
-          <div className="flex-1 space-y-6">
-            <div className="space-y-4">
-              <h3 className="text-3xl font-black text-gray-900 leading-tight">O vírus sofre mutações constantes</h3>
-              <p className="text-xl text-gray-700 leading-relaxed font-medium">
-                Pequenas mudanças genéticas criam novas variantes que podem "enganar" as defesas anteriores.
+        <div className="flex flex-col md:flex-row gap-4 md:gap-10 items-center overflow-hidden">
+          <div className="flex-1 space-y-3 md:space-y-6">
+            <div className="space-y-2 md:space-y-4">
+              <h3 className="text-base md:text-3xl font-black text-gray-900 leading-tight">Vírus Mutante</h3>
+              <p className="text-sm md:text-xl text-gray-700 leading-snug md:leading-relaxed font-medium">
+                Mudanças genéticas constantes exigem reforço anual.
               </p>
             </div>
-            <div className="grid grid-cols-1 gap-3">
-              <div className="flex items-start gap-4 bg-white p-4 rounded-xl border border-orange-100 shadow-sm transition-transform hover:scale-[1.02]">
-                <div className="bg-orange-100 p-2 rounded-lg"><Biohazard size={20} className="text-orange-600" /></div>
+            <div className="grid grid-cols-2 lg:grid-cols-1 gap-2 md:gap-3">
+              <div className="flex items-center gap-2 md:gap-4 bg-white p-2 md:p-4 rounded-xl border border-orange-100 shadow-sm transition-transform hover:scale-[1.02]">
+                <div className="bg-orange-100 p-1.5 md:p-2 rounded-lg shrink-0"><Biohazard size={16} className="text-orange-600 md:w-5 md:h-5" /></div>
                 <div>
-                  <h4 className="font-black text-lg">Novas Variantes</h4>
-                  <p className="text-sm text-gray-600 font-bold uppercase tracking-wider">Ameaça contínua</p>
+                  <h4 className="font-black text-xs md:text-lg leading-none">Mutações</h4>
+                  <p className="text-[8px] md:text-sm text-gray-500 font-bold uppercase hidden md:block">Variantes</p>
                 </div>
               </div>
-              <div className="flex items-start gap-4 bg-white p-4 rounded-xl border border-orange-100 shadow-sm transition-transform hover:scale-[1.02]">
-                <div className="bg-orange-100 p-2 rounded-lg"><RefreshCw size={20} className="text-orange-600" /></div>
+              <div className="flex items-center gap-2 md:gap-4 bg-white p-2 md:p-4 rounded-xl border border-orange-100 shadow-sm transition-transform hover:scale-[1.02]">
+                <div className="bg-orange-100 p-1.5 md:p-2 rounded-lg shrink-0"><RefreshCw size={16} className="text-orange-600 md:w-5 md:h-5" /></div>
                 <div>
-                  <h4 className="font-black text-lg">Vacina Atualizada</h4>
-                  <p className="text-sm text-gray-600 font-bold uppercase tracking-wider">Monitoramento da OMS</p>
+                  <h4 className="font-black text-xs md:text-lg leading-none">Reforço</h4>
+                  <p className="text-[8px] md:text-sm text-gray-500 font-bold uppercase hidden md:block">Atualizada</p>
                 </div>
               </div>
             </div>
           </div>
-          <div className="flex-1 max-w-[280px]">
+          <div className="flex-1 max-w-[140px] md:max-w-[280px]">
             <motion.div 
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ delay: 0.5 }}
-              className="relative group"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="relative group shrink-0"
             >
-              <div className="relative rounded-[2rem] overflow-hidden border-4 border-white shadow-xl transform group-hover:-rotate-1 transition-transform">
+              <div className="relative rounded-2xl md:rounded-[2rem] overflow-hidden border-2 md:border-4 border-white shadow-lg">
                 <img 
                   src="https://i.postimg.cc/pLSy4cNc/foto4.jpg" 
                   alt="Mutação do Vírus" 
                   className="w-full h-auto object-cover aspect-square"
                   referrerPolicy="no-referrer"
                 />
-                <div className="absolute top-4 right-4">
-                  <div className="bg-white/95 p-2 rounded-xl shadow-md animate-bounce">
-                    <RefreshCw className="text-orange-600 animate-spin" style={{ animationDuration: '3s' }} size={16} />
-                  </div>
-                </div>
               </div>
             </motion.div>
           </div>
@@ -460,31 +433,31 @@ export default function App() {
       bgColor: "bg-purple-50",
       accentColor: "text-purple-600",
       content: (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4 overflow-hidden">
           {[
-            { type: "mito", text: "A vacina causa gripe.", detail: "É feita de vírus morto." },
-            { type: "mito", text: "Só tomo uma vez na vida.", detail: "A dose deve ser anual." },
-            { type: "verdade", text: "Reduz riscos graves.", detail: "Diminui internações e óbitos." },
-            { type: "verdade", text: "Pode haver reações.", detail: "Dor ou febre baixa são normais." }
+            { type: "mito", text: "Causa gripe.", detail: "Vírus morto." },
+            { type: "mito", text: "Só tomo uma vez.", detail: "Deve ser anual." },
+            { type: "verdade", text: "Reduz riscos.", detail: "Menos internações." },
+            { type: "verdade", text: "Reações leves.", detail: "São normais." }
           ].map((item, i) => (
             <motion.div 
               key={i}
-              className={`p-5 rounded-2xl shadow-sm border flex gap-4 ${
+              className={`p-3 md:p-5 rounded-xl md:rounded-2xl shadow-sm border flex gap-3 md:gap-4 shrink-0 ${
                 item.type === "mito" ? "bg-red-50 border-red-100" : "bg-green-50 border-green-100"
               }`}
             >
               <div className="shrink-0">
                 {item.type === "mito" ? (
-                  <XCircle className="text-red-500 w-8 h-8" />
+                  <XCircle className="text-red-500 w-5 h-5 md:w-8 md:h-8" />
                 ) : (
-                  <CheckCircle2 className="text-green-500 w-8 h-8" />
+                  <CheckCircle2 className="text-green-500 w-5 h-5 md:w-8 md:h-8" />
                 )}
               </div>
-              <div className="space-y-1">
-                <h4 className={`font-black text-xl leading-tight ${item.type === "mito" ? "text-red-700" : "text-green-700"}`}>
-                  {item.type.toUpperCase()}: {item.text}
+              <div className="space-y-0.5 md:space-y-1">
+                <h4 className={`font-black text-xs md:text-xl leading-none ${item.type === "mito" ? "text-red-700" : "text-green-700"}`}>
+                   {item.text}
                 </h4>
-                <p className="text-gray-700 text-sm font-medium">{item.detail}</p>
+                <p className="text-gray-700 text-[10px] md:text-sm font-medium">{item.detail}</p>
               </div>
             </motion.div>
           ))}
@@ -498,30 +471,27 @@ export default function App() {
       bgColor: "bg-pink-50",
       accentColor: "text-pink-600",
       content: (
-        <div className="text-center space-y-8">
-          <div className="max-w-2xl mx-auto space-y-3">
-            <h3 className="text-3xl md:text-5xl font-black text-gray-900 leading-tight">
-              Vacinar é um ato de cuidado.
+        <div className="text-center space-y-4 md:space-y-8 overflow-hidden">
+          <div className="max-w-2xl mx-auto space-y-1 md:space-y-3">
+            <h3 className="text-xl md:text-5xl font-black text-gray-900 leading-tight">
+              Ato de cuidado.
             </h3>
-            <p className="text-xl md:text-3xl text-gray-600 font-medium tracking-tight">
-              Procure o posto de saúde mais próximo.
+            <p className="text-sm md:text-3xl text-gray-600 font-medium tracking-tight">
+              Procure o posto de saúde.
             </p>
           </div>
-          <div className="flex flex-col md:flex-row gap-6 justify-center items-stretch">
-            <div className="bg-white p-6 rounded-3xl shadow-lg border border-pink-100 flex flex-col items-center space-y-3 flex-1 max-w-xs">
-              <div className="w-14 h-14 bg-pink-100 rounded-full flex items-center justify-center">
-                <Users className="text-pink-600 w-7 h-7" />
-              </div>
-              <h4 className="font-black text-gray-900 text-xl">Imunidade Coletiva</h4>
-              <p className="text-sm text-gray-500 font-bold uppercase tracking-wider">Proteção de todos</p>
+          <div className="flex flex-col md:flex-row gap-3 md:gap-6 justify-center items-center">
+            <div className="bg-white p-3 md:p-6 rounded-xl md:rounded-3xl shadow-md border border-pink-100 flex flex-col items-center space-y-1 md:space-y-3 shrink-0">
+              <Users className="text-pink-600 w-5 h-5 md:w-7 md:h-7" />
+              <h4 className="font-black text-gray-900 text-xs md:text-xl">Imunidade Coletiva</h4>
             </div>
-            <div className="bg-pink-600 text-white p-8 rounded-[3rem] shadow-xl flex flex-col items-center space-y-4 flex-1 max-w-sm">
-              <ShieldCheck size={48} className="text-pink-200" />
-              <div className="space-y-2">
-                <h4 className="text-3xl font-black italic">Pronto?</h4>
-                <p className="text-pink-100 text-base font-medium">Leve seu cartão de vacina.</p>
+            <div className="bg-pink-600 text-white p-4 md:p-8 rounded-2xl md:rounded-[3rem] shadow-lg flex flex-col items-center space-y-2 md:space-y-4 w-full max-w-[240px] md:max-w-sm shrink-0">
+              <ShieldCheck size={32} className="text-pink-200 hidden md:block" />
+              <div className="space-y-1 md:space-y-2">
+                <h4 className="text-lg md:text-3xl font-black italic">Pronto?</h4>
+                <p className="text-pink-100 text-[10px] md:text-base font-medium">Use máscara e vacine.</p>
               </div>
-              <button className="bg-white text-pink-600 px-10 py-4 rounded-full font-black text-xl shadow-xl hover:scale-105 transition-transform">
+              <button className="bg-white text-pink-600 px-5 py-2 md:px-10 md:py-4 rounded-full font-black text-xs md:text-xl shadow-md transition-transform">
                 Localizar Posto
               </button>
             </div>
@@ -562,7 +532,7 @@ export default function App() {
       <ProgressBar current={currentSlide} total={slides.length} />
       {/* <AuthorHeader isDark={slide.id === "developer"} /> */}
       
-      <main className="container mx-auto px-6 py-10 h-full flex flex-col justify-center">
+      <main className="container mx-auto px-4 py-4 md:py-10 h-full flex flex-col justify-center">
         <AnimatePresence mode="wait" custom={direction}>
           <motion.div
             key={currentSlide}
@@ -571,24 +541,24 @@ export default function App() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: direction * -100 }}
             transition={{ type: "spring", stiffness: 300, damping: 30 }}
-            className="flex-1 flex flex-col justify-center"
+            className="flex-1 flex flex-col justify-center overflow-hidden"
           >
             {/* Slide Header */}
-            <div className="mb-6 flex items-center gap-4">
+            <div className="mb-4 md:mb-6 flex items-center gap-3 md:gap-4 shrink-0">
               <motion.div 
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ delay: 0.2, type: "spring" }}
-                className="p-3 bg-white rounded-2xl shadow-sm border border-gray-100"
+                className="p-2 md:p-3 bg-white rounded-xl md:rounded-2xl shadow-sm border border-gray-100"
               >
-                {React.cloneElement(slide.icon as React.ReactElement, { className: "w-10 h-10" })}
+                {React.cloneElement(slide.icon as React.ReactElement, { className: "w-6 h-6 md:w-10 md:h-10" })}
               </motion.div>
               <div>
                 <motion.h1 
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3 }}
-                  className="text-4xl md:text-7xl font-black tracking-tight"
+                  className="text-2xl md:text-7xl font-black tracking-tight leading-tight"
                 >
                   {slide.title}
                 </motion.h1>
@@ -597,7 +567,7 @@ export default function App() {
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.4 }}
-                    className="text-xl md:text-2xl text-gray-500 mt-1"
+                    className="text-xs md:text-2xl text-gray-500 mt-0.5"
                   >
                     {slide.subtitle}
                   </motion.p>
