@@ -137,7 +137,7 @@ export default function App() {
             {[
               { name: "Francielle", img: "https://i.postimg.cc/YqMT1tPL/FRANCIELLE-2.jpg" },
               { name: "Thainara", img: "https://i.postimg.cc/xTnBK9Zz/Thainara-2.jpg" },
-              { name: "Marina" },
+              { name: "Marina", img: "https://i.postimg.cc/C17RW8g1/Whats-App-Image-2026-04-20-at-17-01-17.jpg" },
               { name: "Bárbara", img: "https://i.postimg.cc/HnZ0c0KZ/BARBARA2.jpg" },
               { name: "Aline", img: "https://i.postimg.cc/WbTxMsyd/ALINE.jpg" },
               { name: "Carol", img: "https://i.postimg.cc/ht5SyJFH/CAROL-2.jpg" }
